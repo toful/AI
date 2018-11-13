@@ -6,7 +6,7 @@ import java.util.*;
 public class InformedSearch {
 
     public static void main(String[] args) {
-        String file = "map.txt";
+        String file = "map2.txt";
         Map map = new Map( file );
         ArrayList<Operator> solution;
         State finalState ;
@@ -105,6 +105,7 @@ public class InformedSearch {
                 treatedStatesList.put(actual, 0);
             }
         }
+        System.out.println( "Treated nodes: " + treatedStatesList.size() );
         return path;
     }
 
@@ -140,6 +141,7 @@ public class InformedSearch {
                 treatedStatesList.put(actual, 0);
             }
         }
+        System.out.println( "Treated nodes: " + treatedStatesList.size() );
         return path;
     }
 
@@ -184,6 +186,7 @@ public class InformedSearch {
                 treatedStatesList.put(actual, 0);
             }
         }
+        System.out.println( "Treated nodes: " + treatedStatesList.size() );
         return path;
     }
 
@@ -228,6 +231,7 @@ public class InformedSearch {
                 treatedStatesList.put(actual, 0);
             }
         }
+        System.out.println( "Treated nodes: " + treatedStatesList.size() );
         return path;
     }
 

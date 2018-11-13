@@ -82,13 +82,13 @@ public class Node {
             case 2:
                 return heuristic3( finalState );
             case 3:
-                return heuristic4();
+                return heuristic4( finalState, map );
             case 4:
                 return heuristic5();
             case 5:
-                return heuristic6( finalState );
+                return heuristic6( finalState, map );
             case 6:
-                return heuristic7( finalState );
+                return heuristic7( finalState, map );
             case 7:
                 return heuristic8( lastState, map );
             case 8:
@@ -124,10 +124,14 @@ public class Node {
     }
 
     /**Forth heuristic for the informed search algorithm
-     * The value of this node is equal to cost
+     * The value of this node deference of heights between this state and the final state
      */
-    public Function<State, Float> heuristic4() {
-        return( x ) -> cost;
+    public Function<State, Float> heuristic4(State finalState, Map map) {
+        int[][] m = map.getMap();
+        if( m[state.getRow()][state.getColumn()] > m[finalState.getRow()][finalState.getColumn()] ){
+            return( x ) -> (float) 0.5;
+        }
+        else return( x ) -> (float) m[finalState.getRow()][finalState.getColumn()]- m[state.getRow()][state.getColumn()];
     }
 
     /**Fifth heuristic for the informed search algorithm
@@ -138,16 +142,23 @@ public class Node {
     }
 
     /**Sixth heuristic for the informed search algorithm
-     * The value of this node is equal to cost of
-     * this node plus the distance of this node to the final state.
+     * The value of this node is equal to the difference of heights between this
+     * state and the final state plus the distance of this node to the final state.
      */
-    public Function<State, Float> heuristic6(State finalState ) {
-        return( x ) -> (float) ( cost + sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
+    public Function<State, Float> heuristic6(State finalState, Map map ) {
+        int[][] m = map.getMap();
+        if( m[state.getRow()][state.getColumn()] > m[finalState.getRow()][finalState.getColumn()] ){
+            return( x ) -> (float) ( 0.5 + sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
+        }
+        else return( x ) -> (float) ( m[finalState.getRow()][finalState.getColumn()]- m[state.getRow()][state.getColumn()] + sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
     }
 
-    public Function<State, Float> heuristic7(State finalState ) {
-        return( x ) -> (float) ( cost +  path.size() +
-                sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
+    public Function<State, Float> heuristic7(State finalState, Map map ) {
+        int[][] m = map.getMap();
+        if( m[state.getRow()][state.getColumn()] > m[finalState.getRow()][finalState.getColumn()] ){
+            return( x ) -> (float) ( path.size() + 0.5 + sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
+        }
+        else return( x ) -> (float) ( path.size() + m[finalState.getRow()][finalState.getColumn()]- m[state.getRow()][state.getColumn()] + sqrt( pow( finalState.getColumn() - x.getColumn(), 2 ) + pow( finalState.getRow() - x.getRow(), 2 ) ) );
     }
 
     public Function<State, Float> heuristic8(State lastState, Map map ) {
