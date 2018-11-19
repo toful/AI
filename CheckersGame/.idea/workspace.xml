@@ -28,16 +28,28 @@
       <file leaf-file-name="Checkers.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Checkers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="1386">
+              <caret line="143" column="10" lean-forward="false" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
               <folding>
-                <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
                 <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
                 <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-                <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-                <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-                <element signature="method#movement#0;class#Checkers#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AIPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1458">
+              <caret line="145" column="30" lean-forward="false" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+                <element signature="e#10702#10703#0" expanded="true" />
+                <element signature="e#10731#10732#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,15 +58,12 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+            <state relative-caret-position="468">
+              <caret line="257" column="31" lean-forward="false" selection-start-line="257" selection-start-column="31" selection-end-line="257" selection-end-column="31" />
               <folding>
-                <element signature="method#Game#0;class#Game#0" expanded="false" />
                 <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
                 <element signature="method#move#0;class#Game#0" expanded="false" />
                 <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-                <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-                <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
                 <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
                 <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
                 <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -65,29 +74,7 @@
                 <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
                 <element signature="method#printBoard#0;class#Game#0" expanded="false" />
                 <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-                <element signature="method#getWinner#0;class#Game#0" expanded="false" />
                 <element signature="method#clone#0;class#Game#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#2660#2661#0" expanded="true" />
-                <element signature="e#3598#3599#0" expanded="true" />
-                <element signature="e#3626#3627#0" expanded="true" />
-                <element signature="e#3664#3665#0" expanded="true" />
-                <element signature="e#3696#3697#0" expanded="true" />
-                <element signature="e#3727#3728#0" expanded="true" />
-                <element signature="e#3756#3757#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,6 +108,7 @@
       <find>initializeBoard</find>
       <find>repaint</find>
       <find>printBoard</find>
+      <find>getAllMovements</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,9 +131,10 @@
         <option value="$PROJECT_DIR$/src/Graphics.java" />
         <option value="$PROJECT_DIR$/src/some_code.java" />
         <option value="$PROJECT_DIR$/src/Movement.java" />
-        <option value="$PROJECT_DIR$/src/AIPlayer.java" />
         <option value="$PROJECT_DIR$/src/GameGraphics.java" />
+        <option value="$PROJECT_DIR$/src/IARetrunAlphaBetaValue.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/AIPlayer.java" />
         <option value="$PROJECT_DIR$/src/Checkers.java" />
       </list>
     </option>
@@ -157,9 +146,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1666" />
-    <option name="width" value="1024" />
-    <option name="height" value="555" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -179,6 +168,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,19 +177,12 @@
               <item name="CheckersGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="CheckersGame" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CheckersGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CheckersGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,14 +396,22 @@
       <workItem from="1541981468936" duration="9739000" />
       <workItem from="1542039582085" duration="8968000" />
       <workItem from="1542064093729" duration="2394000" />
+      <workItem from="1542154583040" duration="502000" />
+      <workItem from="1542211676114" duration="253000" />
+      <workItem from="1542229370269" duration="3305000" />
+      <workItem from="1542297610543" duration="3074000" />
+      <workItem from="1542318044093" duration="12276000" />
+      <workItem from="1542371869285" duration="10503000" />
+      <workItem from="1542540349906" duration="20809000" />
+      <workItem from="1542624613056" duration="3761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61940000" />
+    <option name="totallyTimeSpent" value="116423000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="0" width="1600" height="1200" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -430,18 +422,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34930876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6453674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.100292824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5702875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5686901" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -464,46 +456,71 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="54" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Checkers.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AIPlayer.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>171</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>176</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Checkers.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="80" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>level == 2</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>level == 1</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
-            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
-            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
-            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
             <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
             <element signature="method#move#0;class#Game#0" expanded="false" />
             <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
             <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
             <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
             <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -514,7 +531,288 @@
             <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
             <element signature="method#printBoard#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-            <element signature="method#getWinner#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="127" lean-forward="false" selection-start-line="24" selection-start-column="127" selection-end-line="24" selection-end-column="127" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
+            <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
+            <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
+            <element signature="method#paint#0;class#Checkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+          <folding>
+            <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#move#0;class#Game#0" expanded="false" />
+            <element signature="method#makeMove#0;class#Game#0" expanded="false" />
+            <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
+            <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#removeToken#0;class#Game#0" expanded="false" />
+            <element signature="method#allowedToken#0;class#Game#0" expanded="false" />
+            <element signature="method#tokenMovementsAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#getUpPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#getDownPositions#0;class#Game#0" expanded="false" />
+            <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
             <element signature="method#clone#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -526,15 +824,9 @@
           <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3626#3627#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,36 +836,23 @@
         <state relative-caret-position="378">
           <caret line="25" column="13" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
             <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
             <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java" />
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
           <folding>
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
             <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
             <element signature="method#move#0;class#Game#0" expanded="false" />
             <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
             <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
             <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
             <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -584,7 +863,6 @@
             <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
             <element signature="method#printBoard#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-            <element signature="method#getWinner#0;class#Game#0" expanded="false" />
             <element signature="method#clone#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -596,15 +874,9 @@
           <caret line="69" column="120" lean-forward="false" selection-start-line="69" selection-start-column="120" selection-end-line="69" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3626#3627#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,36 +886,23 @@
         <state relative-caret-position="378">
           <caret line="25" column="13" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
             <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
             <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java" />
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1746">
           <caret line="97" column="65" lean-forward="false" selection-start-line="97" selection-start-column="65" selection-end-line="97" selection-end-column="65" />
           <folding>
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
             <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
             <element signature="method#move#0;class#Game#0" expanded="false" />
             <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
             <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
             <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
             <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -654,7 +913,6 @@
             <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
             <element signature="method#printBoard#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-            <element signature="method#getWinner#0;class#Game#0" expanded="false" />
             <element signature="method#clone#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -666,42 +924,23 @@
           <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3626#3627#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="125" column="17" lean-forward="false" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java" />
     <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3626#3627#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,13 +950,10 @@
         <state relative-caret-position="36">
           <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
             <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
             <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -728,12 +964,9 @@
         <state relative-caret-position="1890">
           <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
           <folding>
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
             <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
             <element signature="method#move#0;class#Game#0" expanded="false" />
             <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
             <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
             <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
             <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -744,7 +977,6 @@
             <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
             <element signature="method#printBoard#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-            <element signature="method#getWinner#0;class#Game#0" expanded="false" />
             <element signature="method#clone#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -763,13 +995,10 @@
         <state relative-caret-position="468">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
             <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
             <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="6574" column="0" lean-forward="false" selection-start-line="6574" selection-start-column="0" selection-end-line="6574" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,57 +1038,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IAReturnValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllMovements#0;class#AIPlayer#0" expanded="false" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3626#3627#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameGraphics.java" />
     <entry file="file://$PROJECT_DIR$/crown.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IARetrunAlphaBetaValue.java" />
+    <entry file="file://$PROJECT_DIR$/src/IAReturnValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+        <state relative-caret-position="468">
+          <caret line="257" column="31" lean-forward="false" selection-start-line="257" selection-start-column="31" selection-end-line="257" selection-end-column="31" />
           <folding>
-            <element signature="method#Game#0;class#Game#0" expanded="false" />
             <element signature="method#initializeBoard#0;class#Game#0" expanded="false" />
             <element signature="method#move#0;class#Game#0" expanded="false" />
             <element signature="method#makeMove#0;class#Game#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayerMovemens#0;class#Game#0" expanded="false" />
             <element signature="method#resetPlay#0;class#Game#0" expanded="false" />
             <element signature="method#swapPlayer#0;class#Game#0" expanded="false" />
             <element signature="method#removeToken#0;class#Game#0" expanded="false" />
@@ -871,24 +1071,33 @@
             <element signature="method#jumpAvailable#0;class#Game#0" expanded="false" />
             <element signature="method#printBoard#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayerTokens#0;class#Game#0" expanded="false" />
-            <element signature="method#getWinner#0;class#Game#0" expanded="false" />
             <element signature="method#clone#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="145" column="30" lean-forward="false" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#alphaBeta#0;class#AIPlayer#0" expanded="false" />
+            <element signature="e#10702#10703#0" expanded="true" />
+            <element signature="e#10731#10732#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Checkers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="1386">
+          <caret line="143" column="10" lean-forward="false" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
           <folding>
-            <element signature="method#Checkers#0;class#Checkers#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setGameWindow#0;class#Checkers#0" expanded="false" />
             <element signature="method#drawPiece#0;class#Checkers#0" expanded="false" />
             <element signature="method#paint#0;class#Checkers#0" expanded="false" />
-            <element signature="method#gameOverDisplay#0;class#Checkers#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#Checkers#0" expanded="false" />
-            <element signature="method#movement#0;class#Checkers#0" expanded="false" />
           </folding>
         </state>
       </provider>

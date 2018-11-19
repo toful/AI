@@ -19,26 +19,34 @@ public class Checkers extends JPanel implements ActionListener, MouseListener {
 
     private int row, col;
     private Game board;
-    private AIPlayer hal;
+    private AIPlayer hal, bender;
+
+    private int playMode;
+
+    long time_start, time_end;
+    long total_time = 0;
+    long total_turns = 0;
 
     public static void main(String[] args) {
-        new Checkers();
+        int mode = 1;       //0-player vs player, 1-player vs IA, 2-IA vs IA
+        int algorithm = 1;  //0-minimax 1-alphabeta
+        int heuristic = 2;  // heuristic for the AI 0,1,2
 
-
-
-
+        new Checkers( mode, algorithm, heuristic );
     }
 
 
-    public Checkers(){
+    public Checkers( int mode, int algorithm, int heuristic ){
         try {
             crownImage = ImageIO.read(new File("crown.png"));
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        playMode = mode;
         board = new Game();
-        hal = new AIPlayer( board.RED );
+        hal = new AIPlayer( board.RED, algorithm, heuristic );
+        bender = new AIPlayer( board.WHITE, 1, 2 );
         setGameWindow( width, height, this );
         numTilesPerRow = board.numTilesPerRow;
 
@@ -130,6 +138,10 @@ public class Checkers extends JPanel implements ActionListener, MouseListener {
         g.setColor(Color.white);
         g.setFont(small);
         g.drawString(msg, (width - metr.stringWidth(msg)) / 2, width / 2);
+        //System.out.println("Average: "+(float) total_time/total_turns );
+        System.out.println("winner: "+board.getWinner() );
+        //board = new Game();
+        //iaVsIA( hal, bender );
     }
 
     public void mousePressed(MouseEvent evt) {
@@ -137,30 +149,77 @@ public class Checkers extends JPanel implements ActionListener, MouseListener {
         col = (evt.getX()-8) / tileSize; // 8 is left frame length
         row = (evt.getY()-30) / tileSize; // 30 is top frame length
 
-        movement(row, col);
-        //board.move(row, col);
+        try {
+            movement(row, col);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         repaint();
     }
 
-    public void movement( int row, int col){
-        //case in which we have selected the token
+    public void movement( int row, int col ) throws InterruptedException {
+        switch ( playMode ){
+            case 0:
+                playerVsPlayer( row, col );
+                break;
+            case 1:
+                playerVsIA( row, col, hal );
+                break;
+            case 2:
+                iaVsIA( hal, bender );
+                break;
+        }
+    }
+
+    public void playerVsPlayer( int row, int col ){
+        board.move( row, col );
+        if( board.getPlayerMovemens( board.getActualPlayer()).isEmpty() ) board.resetPlay();
+    }
+
+    public void playerVsIA( int row, int col, AIPlayer ia ){
+        Movement movement;
         if( board.onMove ){
             if ( board.move(row, col) ) {
-                if( !board.gameOver() && hal.getIAPlayer() == board.getActualPlayer() ){
+                if( board.getPlayerMovemens( board.getActualPlayer()).isEmpty() ) board.resetPlay();
+                if( !board.gameOver() && ia.getIAPlayer() == board.getActualPlayer() ){
                     repaint();
-                    hal.miniMax( board, 1 );
-                    System.out.println("IA result: "+hal.getToken().x+" "+hal.getToken().y+" "+hal.getTokenMove().x+" "+hal.getTokenMove().y );
-                    board.makeMove( hal.getToken(), hal.getTokenMove() );
+                    time_start = System.currentTimeMillis();
+                    movement = ia.decideMove( board );
+                    time_end = System.currentTimeMillis();
+                    total_time += ( time_end - time_start );
+                    total_turns++;
+                    board.makeMove( movement.currentPosition, movement.nextPosition );
                 }
             }
         }//case in which we have to select the token
         else{
-            if( hal.getIAPlayer() != board.getActualPlayer() ) board.move(row, col);
+            if( board.getPlayerMovemens( board.getActualPlayer()).isEmpty() ) board.resetPlay();
+            if( ia.getIAPlayer() != board.getActualPlayer() ) board.move(row, col);
             else{
-                hal.miniMax( board, 1 );
-                System.out.println("IA result: "+hal.getToken().x+" "+hal.getToken().y+" "+hal.getTokenMove().x+" "+hal.getTokenMove().y );
-                board.makeMove( hal.getToken(), hal.getTokenMove() );
+                time_start = System.currentTimeMillis();
+                movement = ia.decideMove( board );
+                time_end = System.currentTimeMillis();
+                total_time += ( time_end - time_start );
+                total_turns++;
+                board.makeMove( movement.currentPosition, movement.nextPosition );
             }
+        }
+    }
+
+    public void iaVsIA( AIPlayer ia1, AIPlayer ia2 ) {
+        Movement movement;
+        update( frame.getGraphics() );
+        repaint();
+        if( board.getPlayerMovemens( board.getActualPlayer()).isEmpty() ) board.resetPlay();
+        if( !board.gameOver() && ia1.getIAPlayer() == board.getActualPlayer() ){
+            movement = ia1.decideMove( board );
+            board.makeMove( movement.currentPosition, movement.nextPosition );
+            iaVsIA( ia1, ia2 );
+        }
+        else if ( !board.gameOver() && ia2.getIAPlayer() == board.getActualPlayer() ){
+            movement = ia2.decideMove( board );
+            board.makeMove( movement.currentPosition, movement.nextPosition );
+            iaVsIA( ia1, ia2 );
         }
     }
 

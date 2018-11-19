@@ -37,6 +37,7 @@ Simple version of the checkers game with artificial intelligence.
 
 The algorithms implemented are:
 * MiniMax
+* Alpha-Beta
 
 The game is played in a 8x8 board with 12 tokens each player (RED and WHITE).
 

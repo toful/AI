@@ -127,7 +127,6 @@ public class Game{
     }
 
     public boolean gameOver( ){
-        if ( whiteTokensAvailable == 0 || redTokensAvailable == 0 ) return true;
         if ( getPlayerMovemens( RED ).size() == 0 && getPlayerMovemens( WHITE ).size() == 0 )return true;
         return false;
     }
@@ -147,7 +146,7 @@ public class Game{
         possibleJump = false;
         actualToken_movements = new ArrayList<>();
         swapPlayer();
-        if( getPlayerMovemens(player).size() == 0 ) resetPlay();
+        //if( getPlayerMovemens(player).size() == 0 ) resetPlay();
         //printBoard();
     }
 
@@ -244,9 +243,27 @@ public class Game{
     }
 
     public int getWinner(){
-        if( redTotalTokens > whiteTotalTokens ) return RED;
-        else if( whiteTotalTokens > redTotalTokens ) return WHITE;
-        else return -1;
+        if( redKingTokens > whiteKingTokens ) return RED;
+        else if( whiteKingTokens > redKingTokens) return WHITE;
+        else{
+            int redTokensLine = getNumberTokensPlayerRow( RED, numTilesPerRow -2);
+            int whiteTokensLine = getNumberTokensPlayerRow( WHITE, 1 );
+            if(  redTokensLine > whiteTokensLine ) return RED;
+            else if( whiteTokensLine > redTokensLine  ) return WHITE;
+            else {
+                redTokensLine = getNumberTokensPlayerRow( RED, numTilesPerRow -3);
+                whiteTokensLine = getNumberTokensPlayerRow( WHITE, 2 );
+                if(  redTokensLine > whiteTokensLine ) return RED;
+                else if( whiteTokensLine > redTokensLine  ) return WHITE;
+                else return -1;
+            }
+        }
+    }
+
+    public int getNumberTokensPlayerRow( int player, int row ){
+        int tokens = 0;
+        for( int i=0; i<numTilesPerRow; i++) if( board[row][i] == player ) tokens++;
+        return tokens;
     }
 
     @Override
@@ -264,6 +281,9 @@ public class Game{
 
         newGame.redTotalTokens = redTotalTokens ;
         newGame.whiteTotalTokens = whiteTotalTokens ;
+
+        newGame.redKingTokens = redKingTokens;
+        newGame.whiteKingTokens = whiteKingTokens;
 
         newGame.onMove = onMove;
         newGame.token_pos = token_pos;
