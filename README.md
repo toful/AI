@@ -2,6 +2,8 @@
 Artificial Intelligence exercises carried out during the AI subject, URV
 * **Informed Search**
 * **Checkers Game**
+* **Film Recommender System**
+* **Lord Of The Rings Ontology**
 
 ## Informed Search
 Studying the different ways to find a path for moving as fast as we can in a different highs map.
@@ -50,6 +52,21 @@ The game is played in a 8x8 board with 12 tokens each player (RED and WHITE).
 * Game ends when no player can't move any token
 * Wins the player with a higher number of dames (if both players have the same number of dames, wins the player with more tokens)
 
+## Film Recommender System
+Expert system implemented over the CLIPS Shell that automates the task of recommending movies.
+The knowledge base used is represented through frames.
+
+### Pre-requisites
+* CLIPS
+
+### Run
+```
+$ clips
+$ (batch films.bat)
+```
+
+## Lord Of The Rings Ontology
+Simple Lord of the Rings based Ontology example written in OWL using Protégé.
 
 ## Author
 

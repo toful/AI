@@ -1,0 +1,724 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns="http://www.owl-ontologies.com/Ontology1542661793.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1542661793.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Warg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Other_Creature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dwarve">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="livesIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Ereborn"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Light_Race"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sword">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        ></owl:hasValue>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasName"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Weapon"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Plate_Armour">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Armour"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Númenor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:hasValue>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="inRuins"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spear">
+    <rdfs:subClassOf rdf:resource="#Weapon"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mail_Shirt">
+    <rdfs:subClassOf rdf:resource="#Armour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Uruk-hai">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Orc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Helment">
+    <rdfs:subClassOf rdf:resource="#Armour"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dúnedain">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="comesFrom"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Númenor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Men"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Dark_Race"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Axe">
+    <rdfs:subClassOf rdf:resource="#Weapon"/>
+  </owl:Class>
+  <owl:Class rdf:ID="The_Shire">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Valinor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Mithril_Shirt">
+    <rdfs:subClassOf rdf:resource="#Mail_Shirt"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Corrupted_Men">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dark_Race"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Elve_Sword">
+    <rdfs:subClassOf rdf:resource="#Sword"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Dark_Race">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="fightsAgainst"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Light_Race"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="mountsA"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Other_Creature"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Weapon"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="attacksWith"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isEquipedWith"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Armour"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Race"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Rohirrim"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Hobbit"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Dúnedain"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Throwing_Knive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Dagger"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Mordor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Eagle">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Other_Creature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Light_Race">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="alsoAttacksWith"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Weapon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#fightsAgainst"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Dark_Race"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Light_Race"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="travelsWith"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Other_Creature"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#mountsA"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Weapon"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="normalyAttacksWith"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isEquipedWith"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Armour"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Race"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Rohirrim">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Rohan"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#livesIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Men"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Dark_Race"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Other_Creature">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isMountedBy"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Dark_Race"/>
+              <owl:Class rdf:about="#Light_Race"/>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Race"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Elve">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#livesIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Rivendell"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Light_Race"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Greaves">
+    <rdfs:subClassOf rdf:resource="#Armour"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Men">
+    <rdfs:subClassOf rdf:resource="#Light_Race"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Dagger">
+    <rdfs:subClassOf rdf:resource="#Weapon"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Maiar">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#livesIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Middle_Earth"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#comesFrom"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Valinor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Ainur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Rivendell">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Gondor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Race">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#hasName"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Nazgûl">
+    <rdfs:subClassOf rdf:resource="#Corrupted_Men"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Goblin">
+    <rdfs:subClassOf rdf:resource="#Dark_Race"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dragon">
+    <rdfs:subClassOf rdf:resource="#Other_Creature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Giant_Spider">
+    <rdfs:subClassOf rdf:resource="#Other_Creature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Ereborn">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Ainur">
+    <rdfs:subClassOf rdf:resource="#Race"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Arnor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#inRuins"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Middle_Earth"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Ent">
+    <rdfs:subClassOf rdf:resource="#Light_Race"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bow">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >50</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="arrowsNumber"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Weapon"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Valar">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Valinor"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#livesIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Ainur"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Hobbit">
+    <owl:disjointWith rdf:resource="#Dark_Race"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#comesFrom"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#The_Shire"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Men"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Orc">
+    <rdfs:subClassOf rdf:resource="#Dark_Race"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Horse">
+    <rdfs:subClassOf rdf:resource="#Other_Creature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mûmakil">
+    <rdfs:subClassOf rdf:resource="#Other_Creature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Balrog">
+    <rdfs:subClassOf rdf:resource="#Other_Creature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Vambrace">
+    <rdfs:subClassOf rdf:resource="#Armour"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Middle_Earth">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Troll">
+    <rdfs:subClassOf rdf:resource="#Dark_Race"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Rohan">
+    <rdfs:subClassOf rdf:resource="#Middle_Earth"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dwarve_Sword">
+    <rdfs:subClassOf rdf:resource="#Sword"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Place">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</owl:hasValue>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#inRuins"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#comesFrom">
+    <rdfs:domain rdf:resource="#Race"/>
+    <rdfs:range rdf:resource="#Place"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#travelsWith">
+    <rdfs:domain rdf:resource="#Race"/>
+    <rdfs:range rdf:resource="#Race"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#attacksWith">
+    <rdfs:range rdf:resource="#Weapon"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Ainur"/>
+          <owl:Class rdf:about="#Dark_Race"/>
+          <owl:Class rdf:about="#Light_Race"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#mountsA">
+    <rdfs:range rdf:resource="#Other_Creature"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Dark_Race"/>
+          <owl:Class rdf:about="#Light_Race"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isMountedBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#alsoAttacksWith">
+    <rdfs:subPropertyOf rdf:resource="#attacksWith"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#fightsAgainst">
+    <rdfs:domain rdf:resource="#Race"/>
+    <rdfs:range rdf:resource="#Race"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isMountedBy">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Dark_Race"/>
+          <owl:Class rdf:about="#Light_Race"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf rdf:resource="#mountsA"/>
+    <rdfs:domain rdf:resource="#Other_Creature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#normalyAttacksWith">
+    <rdfs:subPropertyOf rdf:resource="#attacksWith"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#livesIn">
+    <rdfs:range rdf:resource="#Place"/>
+    <rdfs:domain rdf:resource="#Race"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isEquipedWith">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Armour"/>
+          <owl:Class rdf:about="#Weapon"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Race"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="isInjured">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Race"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#inRuins">
+    <rdfs:domain rdf:resource="#Place"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#arrowsNumber">
+    <rdfs:domain rdf:resource="#Bow"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGoneToWar">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Race"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasName">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Sword"/>
+          <owl:Class rdf:about="#Race"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <Arnor rdf:ID="Arnor_77"/>
+  <Horse rdf:ID="Horse_100">
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Travis</hasName>
+    <isMountedBy>
+      <Dwarve rdf:ID="Dwarves_107">
+        <travelsWith>
+          <Elve rdf:ID="Elves_93">
+            <isEquipedWith>
+              <Mail_Shirt rdf:ID="Mail_Shirt_96"/>
+            </isEquipedWith>
+            <fightsAgainst>
+              <Troll rdf:ID="Troll_88">
+                <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Moria Troll</hasName>
+              </Troll>
+            </fightsAgainst>
+            <travelsWith rdf:resource="#Dwarves_107"/>
+            <hasGoneToWar rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</hasGoneToWar>
+            <isEquipedWith>
+              <Greaves rdf:ID="Greaves_97"/>
+            </isEquipedWith>
+            <isEquipedWith>
+              <Vambrace rdf:ID="Vambrace_98"/>
+            </isEquipedWith>
+            <mountsA rdf:resource="#Horse_100"/>
+            <alsoAttacksWith>
+              <Dagger rdf:ID="Dagger_86"/>
+            </alsoAttacksWith>
+            <normalyAttacksWith>
+              <Bow rdf:ID="Bow_95">
+                <arrowsNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >200</arrowsNumber>
+              </Bow>
+            </normalyAttacksWith>
+            <comesFrom>
+              <Rivendell rdf:ID="Rivendell_99"/>
+            </comesFrom>
+            <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Legolas</hasName>
+            <travelsWith>
+              <Dúnedain rdf:ID="Dúnedain_74">
+                <travelsWith rdf:resource="#Elves_93"/>
+                <fightsAgainst rdf:resource="#Troll_88"/>
+                <mountsA>
+                  <Horse rdf:ID="Horse_76">
+                    <isMountedBy rdf:resource="#Dúnedain_74"/>
+                    <hasGoneToWar rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</hasGoneToWar>
+                    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Brego</hasName>
+                  </Horse>
+                </mountsA>
+                <comesFrom>
+                  <Númenor rdf:ID="Númenor_79"/>
+                </comesFrom>
+                <isEquipedWith>
+                  <Mail_Shirt rdf:ID="Mail_Shirt_91"/>
+                </isEquipedWith>
+                <travelsWith rdf:resource="#Dwarves_107"/>
+                <livesIn>
+                  <Gondor rdf:ID="Gondor_78"/>
+                </livesIn>
+                <isEquipedWith>
+                  <Vambrace rdf:ID="Vambrace_89"/>
+                </isEquipedWith>
+                <isInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</isInjured>
+                <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Aragorn</hasName>
+                <alsoAttacksWith>
+                  <Bow rdf:ID="Bow_82">
+                    <arrowsNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >50</arrowsNumber>
+                  </Bow>
+                </alsoAttacksWith>
+                <travelsWith>
+                  <Hobbit rdf:ID="Hobbit_80">
+                    <travelsWith rdf:resource="#Dúnedain_74"/>
+                    <comesFrom>
+                      <The_Shire rdf:ID="The_Shire_83"/>
+                    </comesFrom>
+                    <livesIn rdf:resource="#The_Shire_83"/>
+                    <hasGoneToWar rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</hasGoneToWar>
+                    <isInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</isInjured>
+                    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >frodo</hasName>
+                    <attacksWith>
+                      <Dagger rdf:ID="Dagger_81"/>
+                    </attacksWith>
+                    <isEquipedWith>
+                      <Mithril_Shirt rdf:ID="Mithril_Shirt_92"/>
+                    </isEquipedWith>
+                    <fightsAgainst>
+                      <Goblin rdf:ID="Goblin_84">
+                        <isInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</isInjured>
+                        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Goblin Soldier</hasName>
+                        <attacksWith>
+                          <Dagger rdf:ID="Dagger_85"/>
+                        </attacksWith>
+                        <fightsAgainst rdf:resource="#Hobbit_80"/>
+                        <mountsA>
+                          <Warg rdf:ID="Warg_87">
+                            <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >pipo</hasName>
+                            <isMountedBy rdf:resource="#Goblin_84"/>
+                          </Warg>
+                        </mountsA>
+                      </Goblin>
+                    </fightsAgainst>
+                  </Hobbit>
+                </travelsWith>
+                <normalyAttacksWith>
+                  <Elve_Sword rdf:ID="Elve_Sword_75">
+                    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    ></hasName>
+                    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Andúril</hasName>
+                  </Elve_Sword>
+                </normalyAttacksWith>
+                <isEquipedWith>
+                  <Greaves rdf:ID="Greaves_90"/>
+                </isEquipedWith>
+                <hasGoneToWar rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</hasGoneToWar>
+              </Dúnedain>
+            </travelsWith>
+            <livesIn rdf:resource="#Rivendell_99"/>
+            <isInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</isInjured>
+          </Elve>
+        </travelsWith>
+        <travelsWith rdf:resource="#Dúnedain_74"/>
+        <livesIn>
+          <Ereborn rdf:ID="Ereborn_106"/>
+        </livesIn>
+        <mountsA rdf:resource="#Horse_100"/>
+        <isEquipedWith>
+          <Vambrace rdf:ID="Vambrace_102"/>
+        </isEquipedWith>
+        <isEquipedWith>
+          <Helment rdf:ID="Helment_105"/>
+        </isEquipedWith>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Gimli</hasName>
+        <isInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</isInjured>
+        <fightsAgainst rdf:resource="#Troll_88"/>
+        <isEquipedWith>
+          <Mail_Shirt rdf:ID="Mail_Shirt_104"/>
+        </isEquipedWith>
+        <comesFrom rdf:resource="#Ereborn_106"/>
+        <isEquipedWith>
+          <Greaves rdf:ID="Greaves_103"/>
+        </isEquipedWith>
+        <attacksWith>
+          <Axe rdf:ID="Axe_101"/>
+        </attacksWith>
+        <hasGoneToWar rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</hasGoneToWar>
+      </Dwarve>
+    </isMountedBy>
+    <isMountedBy rdf:resource="#Elves_93"/>
+  </Horse>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 660)  http://protege.stanford.edu -->
