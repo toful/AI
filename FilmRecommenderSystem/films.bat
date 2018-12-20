@@ -154,14 +154,14 @@
     ( object (is-a Client ) (last-day Sports) )
     ?obj <-( object ( is-a Action ) )
     =>
-    (send ?obj updateValue 30 )
+    (send ?obj updateValue 20 )
 )
 
 (defrule lastDaySports2
     ( object (is-a Client ) (last-day Sports) )
     ?obj <-( object ( is-a Terror ) )
     =>
-    (send ?obj updateValue 25 )
+    (send ?obj updateValue 10 )
 )
 
 (defrule lastDayFamily1
